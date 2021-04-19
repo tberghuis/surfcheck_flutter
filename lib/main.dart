@@ -20,7 +20,6 @@ class _VideoAppState extends State<VideoApp> {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         //
         //
-
         _controller.play();
 
         setState(() {});
