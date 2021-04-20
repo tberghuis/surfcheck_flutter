@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'presentation/widgets/app_drawer.dart';
+
 import 'presentation/router/app_router.dart';
 
 void main() => runApp(MyApp(
@@ -23,17 +23,17 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
+// class MyHomePage extends StatelessWidget {
+//   final String title;
 
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+//   MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: Center(child: Text('My Page!')),
-      drawer: AppDrawer(),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(title: Text(title)),
+//       body: Center(child: Text('My Page!')),
+//       drawer: AppDrawer(),
+//     );
+//   }
+// }
