@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
+import 'presentation/widgets/app_drawer.dart';
+import 'presentation/router/app_router.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MyApp(
+      appRouter: AppRouter(),
+    ));
 
 class MyApp extends StatelessWidget {
-  final appTitle = 'Drawer Demo';
+  final appTitle = 'Surfcheck';
+  final AppRouter appRouter;
+
+  const MyApp({
+    required this.appRouter,
+  });
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: appTitle,
-      home: MyHomePage(title: appTitle),
+      onGenerateRoute: appRouter.onGenerateRoute,
     );
   }
 }
@@ -24,41 +33,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
       body: Center(child: Text('My Page!')),
-      drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
-            ListTile(
-              title: Text('Item 1'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Item 2'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: AppDrawer(),
     );
   }
 }
