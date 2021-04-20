@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import '../screens/home_screen.dart';
+import '../screens/cam_screen.dart';
+
+// lets do this basic MVP without arguments
 
 class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
@@ -7,6 +10,11 @@ class AppRouter {
       case '/':
         return MaterialPageRoute(
           builder: (_) => HomeScreen(),
+        );
+
+      case '/cam/lennox':
+        return MaterialPageRoute(
+          builder: (_) => CamScreen('lennox'),
         );
 
       default:

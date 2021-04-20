@@ -25,12 +25,11 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Item 2'),
+            title: Text('lennox'),
             onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
+              
+              // Navigator.pop(context);
+              Navigator.popAndPushNamed(context, '/cam/lennox');
             },
           ),
         ],
