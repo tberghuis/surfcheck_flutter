@@ -13,9 +13,9 @@ class AppRouter {
           builder: (_) => HomeScreen(),
         );
 
-      case '/cam/lennox':
+      case '/cam':
         return MaterialPageRoute(
-          builder: (_) => CamScreen(Cam.lennox),
+          builder: (_) => CamScreen(settings.arguments as Cam),
         );
 
       default:
