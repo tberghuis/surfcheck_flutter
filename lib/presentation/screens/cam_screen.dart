@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/video_stream.dart';
+import '../../constants/maps.dart';
 
 class CamScreen extends StatelessWidget {
-  final beachName;
+  final String beachName;
 
   const CamScreen(this.beachName);
 
@@ -13,7 +14,8 @@ class CamScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Surfcheck'),
       ),
-      body: VideoStream(),
+      // i don't get why this needs null check?
+      body: VideoStream(beachNameUrlMap[beachName]!),
       drawer: AppDrawer(),
     );
   }

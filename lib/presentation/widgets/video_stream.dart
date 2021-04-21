@@ -2,6 +2,10 @@ import 'package:video_player/video_player.dart';
 import 'package:flutter/material.dart';
 
 class VideoStream extends StatefulWidget {
+  final String camUrl;
+
+  VideoStream(this.camUrl);
+
   @override
   _VideoStreamState createState() => _VideoStreamState();
 }
@@ -12,8 +16,10 @@ class _VideoStreamState extends State<VideoStream> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-        'https://cams.cdn-surfline.com/cdn-au/au-lennoxhead/playlist.m3u8')
+    // _controller = VideoPlayerController.network(
+    //     'https://cams.cdn-surfline.com/cdn-au/au-lennoxhead/playlist.m3u8')
+
+    _controller = VideoPlayerController.network(widget.camUrl)
       ..initialize().then((_) {
         _controller.play();
         setState(() {});
