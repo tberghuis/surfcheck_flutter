@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../screens/home_screen.dart';
 import '../screens/cam_screen.dart';
+import '../../constants/enums.dart';
 
 // lets do this basic MVP without arguments
 
@@ -14,7 +15,7 @@ class AppRouter {
 
       case '/cam/lennox':
         return MaterialPageRoute(
-          builder: (_) => CamScreen('lennox'),
+          builder: (_) => CamScreen(Cam.lennox),
         );
 
       default:
