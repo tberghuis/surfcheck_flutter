@@ -1,3 +1,5 @@
+// todo write a script to generate this from csv
+
 enum Cam {
   seaway_jetty,
   main_beach,
@@ -12,10 +14,15 @@ enum Cam {
   rainbow,
   snapper,
   duranbah,
+  kingscliff,
+  cabarita,
+  brunswick,
+  the_wreck,
   byron_pass,
   lennox,
   shelly,
   ballina,
+  evans,
 }
 
 extension CamExtension on Cam {
@@ -47,6 +54,14 @@ extension CamExtension on Cam {
         return 'Snapper';
       case Cam.duranbah:
         return 'Dbah';
+      case Cam.kingscliff:
+        return 'Kingscliff';
+      case Cam.cabarita:
+        return 'Cabarita';
+      case Cam.brunswick:
+        return 'Brunswick Heads';
+      case Cam.the_wreck:
+        return 'The Wreck';
       case Cam.byron_pass:
         return 'Byron Pass';
       case Cam.lennox:
@@ -55,6 +70,8 @@ extension CamExtension on Cam {
         return 'Shelly\'s';
       case Cam.ballina:
         return 'Ballina';
+      case Cam.evans:
+        return 'Evans Head';
     }
   }
 
@@ -86,6 +103,14 @@ extension CamExtension on Cam {
         return 'https://cams.cdn-surfline.com/cdn-au/au-snapper/playlist.m3u8';
       case Cam.duranbah:
         return 'https://cams.cdn-surfline.com/cdn-au/au-duranbah/playlist.m3u8';
+      case Cam.kingscliff:
+        return 'https://cams.cdn-surfline.com/cdn-au/au-kingscliff/playlist.m3u8';
+      case Cam.cabarita:
+        return 'https://cams.cdn-surfline.com/cdn-au/au-cabarita/playlist.m3u8';
+      case Cam.brunswick:
+        return 'https://cams.cdn-surfline.com/cdn-au/au-brunswickheads/playlist.m3u8';
+      case Cam.the_wreck:
+        return 'https://cams.cdn-surfline.com/cdn-au/au-byronbay/playlist.m3u8';
       case Cam.byron_pass:
         return 'https://cams.cdn-surfline.com/cdn-au/au-thepassoverview/playlist.m3u8';
       case Cam.lennox:
@@ -94,6 +119,8 @@ extension CamExtension on Cam {
         return 'https://cams.cdn-surfline.com/cdn-au/au-ballinashellybeach/playlist.m3u8';
       case Cam.ballina:
         return 'https://cams.cdn-surfline.com/cdn-au/au-ballinalighthouse/chunklist.m3u8';
+      case Cam.evans:
+        return 'https://cams.cdn-surfline.com/cdn-au/au-evanshead/playlist.m3u8';
     }
   }
 }
