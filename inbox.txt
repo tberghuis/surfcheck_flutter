@@ -1,0 +1,8 @@
+tasks in trello, here, github issues
+
+remember notification drawer scroll postion
+custom scroll controller... plus save offset in bloc before navigate
+
+add project to github,
+apk build
+add launcher to home screen
