@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/app_drawer.dart';
+import '../widgets/video_stream.dart';
 
 class CamScreen extends StatelessWidget {
   final beachName;
@@ -12,7 +13,7 @@ class CamScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Surfcheck'),
       ),
-      body: Center(child: Text("cam screen $beachName")),
+      body: VideoStream(),
       drawer: AppDrawer(),
     );
   }
