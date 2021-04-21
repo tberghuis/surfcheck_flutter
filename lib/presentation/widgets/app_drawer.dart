@@ -14,22 +14,6 @@ class AppDrawer extends StatelessWidget {
               color: Colors.blue,
             ),
           ),
-          ListTile(
-            title: Text('Item 1'),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            title: Text('lennox'),
-            onTap: () {
-              // Navigator.pop(context);
-              Navigator.popAndPushNamed(context, '/cam/lennox');
-            },
-          ),
           for (var cam in Cam.values) DrawerEntry(cam),
         ],
       ),

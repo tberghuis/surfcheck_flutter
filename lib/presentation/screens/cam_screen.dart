@@ -14,7 +14,6 @@ class CamScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Surfcheck'),
       ),
-      // i don't get why this needs null check?
       body: VideoStream(cam.url),
       drawer: AppDrawer(),
     );

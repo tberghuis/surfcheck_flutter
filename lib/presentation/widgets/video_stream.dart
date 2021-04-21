@@ -16,9 +16,6 @@ class _VideoStreamState extends State<VideoStream> {
   @override
   void initState() {
     super.initState();
-    // _controller = VideoPlayerController.network(
-    //     'https://cams.cdn-surfline.com/cdn-au/au-lennoxhead/playlist.m3u8')
-
     _controller = VideoPlayerController.network(widget.camUrl)
       ..initialize().then((_) {
         _controller.play();
